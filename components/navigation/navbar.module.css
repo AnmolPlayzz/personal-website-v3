@@ -1,3 +1,12 @@
+@keyframes position {
+    from {
+        transform: translateY(-120px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
 .nav {
     position: fixed;
     top: 0;
@@ -8,8 +17,12 @@
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(20px);
-    background: rgba(48, 48, 48, 0.36);
+    background: rgba(10, 10, 10, 0.84);
     border-bottom: 1px solid rgba(96, 96, 96, 0.16);
+    z-index: 2000;
+    transform: translateY(-120px);
+    animation: position 1s cubic-bezier(0.87, 0, 0.13, 1) .7s forwards;
+    --logo-bg: rgba(23, 23, 23, 0.79);
 }
 
 .desktopNav {
@@ -25,14 +38,13 @@
         align-items: center;
         justify-content: center;
         .logo {
-            background: rgba(37, 37, 37, 0.39);
+            background: var(--logo-bg);
             width: 40px;
             height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 10px;
-
             transition: all 0.2s ease;
         }
         .logo:hover {
@@ -127,7 +139,7 @@
         justify-content: center;
         align-items: center;
         .logo {
-            background: rgba(37, 37, 37, 0.39);
+            background: var(--logo-bg);
             width: 40px;
             height: 40px;
             display: flex;
@@ -176,7 +188,7 @@
             justify-content: center;
 
             .logo {
-                background: rgba(37, 37, 37, 0.39);
+                background: var(--logo-bg);
                 width: 40px;
                 height: 40px;
                 display: flex;
@@ -213,7 +225,7 @@
             .menuIcon {
                 overflow: hidden;
                 border: none;
-                background: rgba(37, 37, 37, 0.39);
+                background: var(--logo-bg);
                 width: 40px;
                 height: 40px;
                 position: relative;
@@ -371,7 +383,7 @@
                     justify-content: center;
                     .logo {
                         border: none;
-                        background: rgba(37, 37, 37, 0.39);
+                        background: var(--logo-bg);
                         width: 40px;
                         height: 40px;
                         position: relative;
@@ -398,7 +410,7 @@
                     justify-content: center;
                     .logo {
                         border: none;
-                        background: rgba(37, 37, 37, 0.39);
+                        background: var(--logo-bg);
                         width: 40px;
                         height: 40px;
                         position: relative;

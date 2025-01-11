@@ -2,8 +2,7 @@ main {
     display: grid;
     gap: 200px;
     color: white;
-    div {
-        padding-top: 100px;
-        height: 100vh;
-    }
+}
+main > div {
+    height: 100vh;
 }
