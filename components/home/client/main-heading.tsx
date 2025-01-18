@@ -11,10 +11,8 @@ export default function MainHeading() {
     useEffect(() => {
         if (!textRef.current) return;
 
-        // First make the container visible
         gsap.set(textRef.current, { opacity: 1 });
 
-        // Split the text into characters
         const text = new SplitType(textRef.current, {
             types: 'chars',
             tagName: 'span'
@@ -23,7 +21,7 @@ export default function MainHeading() {
         gsap.set(text.chars, {
             opacity: 0,
             y: 40,
-            filter: "blur(12px)",
+            filter: "blur(12px)"
         });
         requestAnimationFrame(() => {
             gsap.to(text.chars, {
@@ -39,9 +37,9 @@ export default function MainHeading() {
     }, []);
 
     return (
-        <h1 ref={textRef} className={styles.mainHeading}>
-            I make <span className={styles.bold}>dots</span> on a <br />
-            screen <span className={styles.bold}>move</span> in <br />
+        <h1 ref={textRef} className={styles.mainHeading} >
+            I make <span className={styles.bold}>dots</span> on <br/>
+            screen <span className={styles.bold}>move</span> in <br/>
             <span className={`${styles.bold} ${styles.underline}`}>interesting</span> ways.
         </h1>
     );

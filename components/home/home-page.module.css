@@ -42,7 +42,8 @@
 .homePage {
     position: relative;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: clip;
+    overflow-y: visible;
 }
 
 .bg1 {
@@ -84,14 +85,19 @@
     fill: url(#linear-gradient);
 }
 
+
+
 .artContainer {
     height: 100%;
-    width: 65vw;
+    width: 50vw;
     z-index: -10;
     position: absolute;
     bottom: 0;
     left: 0;
-    overflow: hidden;
+    .clsbg {
+        mix-blend-mode: screen;
+        fill: url(#radial-gradient1);
+    }
     .art {
         object-fit: contain;
         object-position: left bottom;
@@ -101,7 +107,20 @@
         transform: translate(-100vw, 700px);
         animation: position 1s cubic-bezier(0.87, 0, 0.13, 1) .3s forwards;
     }
+    .bottomBg {
+        bottom: -15%;
+        width: 82%;
+        filter: blur(40px);
+        position: absolute;
+        opacity: 0;
+        animation: opacity 1s cubic-bezier(0.87, 0, 0.13, 1) 0.8s forwards;
+    }
 }
+
+.mobile {
+    display: none;
+}
+
 
 .cta {
     position: absolute;
@@ -126,5 +145,29 @@
             transform: translate(-50%, -50%);
             animation: mouseanim 1s cubic-bezier(0.87, 0, 0.13, 1) 1s infinite;
         }
+    }
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .bg1 {
+        display: none;
+    }
+    .artContainer {
+        display: none;
+    }
+    .artContainer.mobile {
+        display: block;
+        height: 100vh;
+        width: 100vw;
+        .art {
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .cta {
+        display: none;
     }
 }

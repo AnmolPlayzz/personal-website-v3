@@ -4,10 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import React, {useEffect, useState} from "react";
 import {useVisibleSection} from "@/hooks/useVisibleSection";
+import {useParams, usePathname} from 'next/navigation'
+import useHash from "@/hooks/useHash";
 export default function Navbar() {
     //Tracking the current content on the screen
     const sections : string[] = ['home', 'about', 'projects'];
-    const current : string | null = useVisibleSection(sections);
+    const currentUrl : string | null = useVisibleSection(sections);
+
+    const hash = useHash()
+    const [current, setCurrent] = useState<null | string>("")
 
     //For the desktop nav
     const [x, setX] = useState<number | null>(null);
@@ -44,9 +49,7 @@ export default function Navbar() {
         setHeight(data.height)
         setWidth(data.width)
         console.log(data)
-
     }
-
 
     function handleItemClick(e?: any) {
         setTimeout(handleMouseOut, 200)
@@ -66,13 +69,19 @@ export default function Navbar() {
             });
         };
     }, []);
-    useEffect(() => {
-        console.log("attempting change",current)
-        setTimeout(handleMouseOut, 100)
-    }, [current]);
 
-    return (<nav className={styles.nav}>
-        <div className={styles.desktopNav}>
+    useEffect(() => {
+        setCurrent(hash!=="" ? hash : "home")
+        setTimeout(handleMouseOut, 100)
+    }, [hash]);
+
+    useEffect(() => {
+        setCurrent(currentUrl)
+        setTimeout(handleMouseOut, 100)
+    }, [currentUrl]);
+
+    return (<nav className={styles.nav} data-scroll-section>
+        <div className={styles.desktopNav} >
             <div className={styles.leftDesktopNav}>
                 <div className={styles.logo}>
                     <Image src="/nav/mainav.png" alt="Main Avatar" width={32} height={32}/>
@@ -82,9 +91,11 @@ export default function Navbar() {
             <div className={styles.centreDesktopNav}>
                 <div className={styles.mainLinks} onMouseOut={handleMouseOut}>
                     <Link href="#home"
+                          data-scroll-target="#home"
                           className={current == "home" ? `${styles.navLinks} ${styles.activeLinkDesktop}` : styles.navLinks}
                           onMouseOver={handleMouseOver} onClick={handleItemClick}>Home</Link>
                     <Link href="#about"
+                          data-scroll-target="#about"
                           className={current == "about" ? `${styles.navLinks} ${styles.activeLinkDesktop}` : styles.navLinks}
                           onMouseOver={handleMouseOver} onClick={handleItemClick}>About</Link>
                     <Link href="#projects"

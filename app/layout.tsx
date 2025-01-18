@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/navigation/navbar";
 import { Roboto } from 'next/font/google'
+import ScrollSmoothWrapper from "@/components/scroll-smooth-wrapper";
 
 const roboto = Roboto({
   weight: ['100','300','400','500','700','900'],
@@ -22,8 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${roboto.className}`}>
-        <Navbar />
-        {children}
+          <Navbar />
+          <ScrollSmoothWrapper>
+              {children}
+          </ScrollSmoothWrapper>
       </body>
     </html>
   );

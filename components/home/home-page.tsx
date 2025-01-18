@@ -1,6 +1,7 @@
 import styles from "./home-page.module.css";
-import art3d from "@/public/home/3dart.png"
-import mouse from "@/public/home/mouse.svg"
+import art3d from "@/public/home/3dart.png";
+import art3dm from "@/public/home/3dartm.png";
+import mouse from "@/public/home/mouse.svg";
 import Image from "next/image";
 import MainHeading from "@/components/home/client/main-heading";
 export default function HomePage() {
@@ -47,14 +48,34 @@ export default function HomePage() {
             </g>
         </svg>
         <MainHeading/>
-        <div className={styles.artContainer}>
+        <div className={styles.artContainer} data-scroll data-scroll-speed="3">
+            <svg className={styles.bottomBg} id="Layer_2_A" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1118.96 564.06">
+                <defs>
+                    <radialGradient id="radial-gradient1" cx="416.32" cy="171.54" fx="217.32" fy="364.58" r="793.12" gradientTransform="translate(0 -33.55) scale(1 .6)" gradientUnits="userSpaceOnUse">
+                        <stop offset=".25" stopColor="#7b6583"/>
+                        <stop offset=".33" stopColor="#6f5b76"/>
+                        <stop offset=".46" stopColor="#514256"/>
+                        <stop offset=".64" stopColor="#201a22"/>
+                        <stop offset=".75" stopColor="#000"/>
+                    </radialGradient>
+                </defs>
+                <g id="Layer_1-2_A">
+                    <rect className={styles.clsbg} width="1118.96" height="564.06"/>
+                </g>
+            </svg>
             <Image src={art3d} alt="Art 3D" style={{
                 filter: 'blur(50px)'
             }} className={styles.art} quality={100} fill={true}/>
-            <Image style={{
-            }} src={art3d} alt="Art 3D" className={styles.art} quality={100} fill={true}/>
+            <Image src={art3d} alt="Art 3D" className={styles.art} quality={100} fill={true}/>
+
         </div>
-        <div className={styles.cta}>
+        <div className={`${styles.artContainer} ${styles.mobile}`}>
+            <Image src={art3dm} alt="Art 3D" style={{
+                filter: 'blur(50px)'
+            }} className={styles.art} quality={100} fill={true}/>
+            <Image style={{}} src={art3dm} alt="Art 3D" className={styles.art} quality={100} fill={true}/>
+        </div>
+        <div className={styles.cta} >
             <div className={styles.ctaLogo}>
                 <Image className={styles.mouse} src={mouse} alt="Mouse" width={20}/>
                 <Image className={styles.mouse} src={mouse} alt="Mouse" style={{
@@ -63,7 +84,7 @@ export default function HomePage() {
             </div>
             <p style={{
                 color: '#ffffff',
-            }} >
+            }}>
                 Scroll down
             </p>
         </div>

@@ -18,7 +18,7 @@
 .mainHeading {
     text-align: right;
     position: absolute;
-    top: 18%;
+    top: calc(10% + 100px);
     right: 80px;
     font-size: 5.4rem;
     font-weight: 100;
@@ -57,5 +57,36 @@
         filter: blur(5px);
         opacity: 0;
         animation: opacity 0.5s cubic-bezier(0.87, 0, 0.13, 1) 2.7s forwards;
+    }
+}
+
+.animContainer {
+    overflow: hidden;
+}
+
+@media screen and (max-width: 800px) {
+
+
+    .mainHeading {
+        text-align: left;
+        font-size: 8vw;
+        position: absolute;
+        width: 65%;
+        padding: 40px;
+        box-sizing: content-box;
+        border-radius: 20px;
+        border: 1.5px solid rgba(255, 255, 255, 0.11);
+        backdrop-filter: blur(40px);
+        background: rgba(0, 0, 0, 0.35);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .underline::after, .underline::before {
+            bottom: 10%;
+            width: 87%;
+        }
+        .underline::after {
+            height: 2px;
+        }
     }
 }
