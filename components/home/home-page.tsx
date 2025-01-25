@@ -67,7 +67,6 @@ export default function HomePage() {
                 filter: 'blur(50px)'
             }} className={styles.art} quality={100} fill={true}/>
             <Image src={art3d} alt="Art 3D" className={styles.art} quality={100} fill={true}/>
-
         </div>
         <div className={`${styles.artContainer} ${styles.mobile}`}>
             <Image src={art3dm} alt="Art 3D" style={{

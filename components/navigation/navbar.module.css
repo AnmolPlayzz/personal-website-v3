@@ -246,7 +246,6 @@
                         border-radius: 15px;
                         background-size: 150%;
                         transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1) 0.2s;
-
                     }
                     .a1 {
                         transition-duration: 0.1s;

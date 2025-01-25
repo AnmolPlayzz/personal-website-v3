@@ -15,13 +15,16 @@ html.has-scroll-smooth {
     overflow: hidden;
 }
 
-[data-scroll-container] {
-    min-height: 100vh;
-}
-
 :root {
   margin: 0;
   padding: 0;
   background: black;
   box-sizing: border-box;
+}
+
+@media screen and (max-width: 800px) {
+    #aboutHeading {
+        width: 180px !important;
+        height: 99px !important;
+    }
 }

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 456.56 242.45">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#radial-gradient-2);
+        mix-blend-mode: lighten;
+      }
+
+      .cls-2 {
+        fill: url(#radial-gradient);
+      }
+
+      .cls-3 {
+        fill: url(#radial-gradient-3);
+      }
+
+      .cls-4 {
+        isolation: isolate;
+      }
+    </style>
+    <radialGradient id="radial-gradient" cx="211.06" cy="68.83" fx="10.13" fy="24.29" r="269.81" gradientUnits="userSpaceOnUse">
+      <stop offset=".06" stop-color="#392957"/>
+      <stop offset=".17" stop-color="#2c2149"/>
+      <stop offset=".43" stop-color="#16142f"/>
+      <stop offset=".58" stop-color="#0e0f26"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="396.86" cy="225.43" fx="396.86" fy="225.43" r="207.61" gradientUnits="userSpaceOnUse">
+      <stop offset=".18" stop-color="#191226"/>
+      <stop offset=".26" stop-color="#171126"/>
+      <stop offset="1" stop-color="#0e0f26"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-3" cx="63.37" cy="249.09" fx="12.66" fy="249.09" r="238.08" gradientUnits="userSpaceOnUse">
+      <stop offset=".04" stop-color="#000"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g class="cls-4">
+    <g id="Layer_2" data-name="Layer 2">
+      <g id="Layer_1-2" data-name="Layer 1">
+        <g>
+          <rect class="cls-2" width="456.56" height="240.97"/>
+          <rect class="cls-1" y="1.48" width="456.56" height="240.97"/>
+          <rect class="cls-3" x="0" width="456.56" height="240.97"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

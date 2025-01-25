@@ -11,12 +11,14 @@
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "gsap": "^3.12.5",
+    "lenis": "^1.1.19",
     "locomotive-scroll": "^4.1.4",
     "lottie-react": "^2.4.0",
     "next": "15.1.4",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-icons": "^5.4.0",
+    "react-locomotive-scroll": "^0.2.2",
     "split-type": "^0.3.4"
   },
   "devDependencies": {
