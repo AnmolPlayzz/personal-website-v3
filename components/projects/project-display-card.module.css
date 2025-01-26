@@ -1,0 +1,27 @@
+.projectDisplayCard {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.21);
+    .info {
+        .h1 {
+            color: white;
+            margin: 0 0 5px 0;
+        }
+        .p {
+            color: white;
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+        background-color: rgba(16, 16, 16, 0.62);
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        padding: 40px;
+        width: 100%;
+        z-index: 7;
+        backdrop-filter: blur(20px);
+    }
+}

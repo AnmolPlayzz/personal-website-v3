@@ -1,0 +1,190 @@
+.projectsPage {
+    position: absolute;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .head {
+        position: relative;
+        width: fit-content;
+        .blur {
+            scale: 1.05;
+            position: absolute;
+            height: 100%;
+            top: 0;
+            left: 0;
+            filter: blur(50px);
+        }
+    }
+    .featured {
+        margin: 25px 0;
+        width: calc(100% - 40px);
+        max-width: 1400px;
+        display: flex;
+        gap: 25px;
+        height: 700px;
+        .info {
+            .h1 {
+                color: white;
+                margin: 0 0 5px 0;
+            }
+            .p {
+                color: white;
+                font-weight: 300;
+                margin-bottom: 15px;
+            }
+            border: 1px solid rgba(75, 75, 75, 0.21);
+            background-color: rgba(16, 16, 16, 0.62);
+            border-radius: 18px;
+            padding: 25px;
+            z-index: 7;
+            backdrop-filter: blur(20px);
+        }
+        .left {
+            width: 50%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            position: relative;
+            border-radius: 20px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.21);
+
+        }
+        .right {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            .right1 {
+                height: 50%;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: flex-end;
+                position: relative;
+                border-radius: 20px;
+                padding: 20px;
+                border: 1px solid rgba(255, 255, 255, 0.21);
+            }
+            .right2 {
+                height: 50%;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                position: relative;
+                border-radius: 20px;
+                padding: 20px;
+                border: 1px solid rgba(255, 255, 255, 0.21);
+            }
+        }
+    }
+    .projectList {
+        max-width: 1400px;
+        display: grid;
+        width: calc(100% - 40px);
+        gap: 25px;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-auto-rows: 400px;
+        margin-bottom: 80px;
+        .githubCta {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            position: relative;
+            border-radius: 20px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            border: 1px solid rgba(255, 255, 255, 0.21);
+            .gitIcon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 80%;
+                height: 80%;
+                mix-blend-mode: soft-light;
+                transition: all 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+            }
+            .text {
+                padding: 40px;
+                font-weight: 800;
+                font-size: 32px;
+                z-index: 10;
+                display: inline-block;
+                transition: all 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+            }
+        }
+        .githubCta:hover {
+            .gitIcon {
+                width: 90%;
+                height: 90%;
+            }
+            .text {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .projectsPage {
+        .featured {
+            flex-direction: column;
+            .left {
+                width: 100%;
+                height: 50%;
+            }
+            .right {
+                width: 100%;
+                height: 50%;
+                flex-direction: row;
+                .right1 {
+                    width: 50%;
+                    height: 100%;
+                }
+                .right2 {
+                    width: 50%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .projectsPage {
+        .featured {
+            flex-direction: column;
+            height: 1200px;
+            .left {
+                width: 100%;
+                height: 50%;
+            }
+            .right {
+                width: 100%;
+                height: 50%;
+                flex-direction: column;
+                .right1 {
+                    width: 100%;
+                    height: 100%;
+                }
+                .right2 {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .projectList {
+            grid-template-columns: 1fr;
+        }
+    }
+}

@@ -46,9 +46,6 @@ export default function AboutPage() {
     }, []);
 
     return <div
-        style={{
-            height: "fit-content",
-        }}
         className={styles.aboutPage}>
         <AboutHeading />
         <div className={styles.glow} ref={glowRef}>

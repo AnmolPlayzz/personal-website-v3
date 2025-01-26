@@ -1,5 +1,6 @@
 .aboutPage {
     position: relative;
+    height: fit-content;
     .glow {
         overflow: hidden;
         width: 100vw;

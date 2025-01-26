@@ -1,0 +1,19 @@
+.projectsHeader {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    border-radius: 20px;
+    width: calc(100vw - 40px);
+    max-width: 1400px;
+    border: 2px solid rgba(255, 255, 255, 0.21);
+    height: calc(100vh - 120px);
+}
+
+@media screen and (max-width: 800px) {
+    .projectsHeader {
+        max-height: 400px;
+    }
+}
