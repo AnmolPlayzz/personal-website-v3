@@ -10,7 +10,7 @@ export default function Home() {
             <HomePage />
         </div>
         <div style={{
-            paddingTop: "40vh",
+            paddingTop: "10vh",
             height: "fit-content",
         }} data-scroll-id="about" id="about">
             <AboutPage />

@@ -1,0 +1,30 @@
+.ideCard {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 20px;
+    height: 100%;
+    z-index: 3;
+    background: linear-gradient(180deg, #757575, #262626);
+    .main {
+        object-fit: contain;
+        object-position: center;
+    }
+}
+
+.ideCard::before {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    content: '';
+    border-radius: 20px;
+
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(23, 23, 23, 1) 100%);;
+
+}

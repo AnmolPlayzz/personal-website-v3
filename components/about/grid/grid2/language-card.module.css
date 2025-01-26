@@ -1,0 +1,77 @@
+.languageCard {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 20px;
+    height: 100%;
+    padding: 20px;
+    .contentContainer {
+        display: grid;
+        gap: 1rem;
+        grid-template-areas: "a b c";
+        backdrop-filter: blur(50px);
+        width: 100%;
+        height: fit-content;
+        padding: 20px;
+        border-radius: 15px;
+        background: rgba(192, 192, 192, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.11);
+        .left {
+            grid-area: a;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .center {
+            grid-area: b;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            .iconsGrid {
+                background: rgba(10, 10, 10, 0.25);
+                border: 1px solid rgba(26, 26, 26, 0.22);
+                border-radius: 12px;
+                padding: 10px;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+            }
+        }
+        .right {
+            grid-area: c;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            .title {
+                background: rgba(10, 10, 10, 0.25);
+                border: 1px solid rgba(26, 26, 26, 0.22);
+                border-radius: 12px;
+                padding: 15px 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 20px;
+                font-weight: 700;
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.84);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1330px) {
+    .languageCard {
+        .contentContainer {
+            grid-template-areas: "c"
+            "b"
+            "a";
+            .center {
+                .iconsGrid {
+                    display: none;
+                }
+            }
+        }
+    }
+}

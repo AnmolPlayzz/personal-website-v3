@@ -1,0 +1,10 @@
+.next3dCard {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 20px;
+    height: 100%;
+}

@@ -1,0 +1,25 @@
+.projectsCard {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 20px;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    .head {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .text {
+        margin-top: 2px;
+        font-size: 24px;
+    }
+}

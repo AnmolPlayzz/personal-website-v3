@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-3f7470d6-cd1b-4336-a50a-136c970f4852" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="42.38" height="37.82" viewBox="0 0 42.38 37.82">
+  <g id="uuid-00965725-22b5-46f0-b9a5-dc5637a0e5c9" data-name="Layer 1">
+    <g>
+      <circle cx="21.19" cy="18.91" r="3.76" style="fill: #61dafb;"/>
+      <g>
+        <ellipse cx="21.19" cy="18.91" rx="20.19" ry="7.71" style="fill: none; stroke: #61dafb; stroke-width: 2px;"/>
+        <ellipse cx="21.19" cy="18.91" rx="7.71" ry="20.19" transform="translate(-6.62 13.13) rotate(-30)" style="fill: none; stroke: #61dafb; stroke-miterlimit: 4; stroke-width: 2px;"/>
+        <ellipse cx="21.19" cy="18.91" rx="20.19" ry="7.71" transform="translate(-5.78 27.81) rotate(-60)" style="fill: none; stroke: #61dafb; stroke-miterlimit: 4; stroke-width: 2px;"/>
+      </g>
+    </g>
+  </g>
+</svg>

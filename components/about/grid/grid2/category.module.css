@@ -1,0 +1,36 @@
+.catg {
+    background: rgba(10, 10, 10, 0.25);
+    border: 1px solid rgba(26, 26, 26, 0.22);
+    border-radius: 12px;
+    padding: 15px;
+    .header {
+        font-size: 1rem;
+        font-weight: 700;
+        border-radius: 12px;
+        margin: 0 0 10px 0;
+    }
+    .grid {
+        display: grid;
+        gap: .8rem;
+        .tool {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.24);
+            border-radius: 12px;
+            .icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .name {
+                margin-left: 10px;
+                font-size: .8rem;
+                color: #cccccc;
+                font-weight: 400;
+            }
+        }
+    }
+}

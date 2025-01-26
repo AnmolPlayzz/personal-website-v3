@@ -4,10 +4,18 @@ import AboutHeading from "@/components/about/client/about-heading";
 import glow from "@/public/about/aboutbg.svg"
 import Image from "next/image";
 import {useEffect, useRef, useState} from "react";
-import NameCard from "@/components/about/grid/gridA/name-card";
-import ExpCard from "@/components/about/grid/gridA/exp-card";
-import EduCard from "@/components/about/grid/gridA/edu-card";
-import SocialsCard from "@/components/about/grid/gridA/socials-card";
+import NameCard from "@/components/about/grid/grid1/name-card";
+import ExpCard from "@/components/about/grid/grid1/exp-card";
+import EduCard from "@/components/about/grid/grid1/edu-card";
+import SocialsCard from "@/components/about/grid/grid1/socials-card";
+import Lang3dCard from "@/components/about/grid/grid2/lang3d-card";
+import Next3dCard from "@/components/about/grid/grid2/next3d-card";
+import Cc3dCard from "@/components/about/grid/grid2/cc3d-card";
+import IdeCard from "@/components/about/grid/grid2/ide-card";
+import LanguageCard from "@/components/about/grid/grid2/language-card";
+import ProjectCard from "@/components/about/grid/grid3/project-card";
+import MailCard from "@/components/about/grid/grid3/mail-card";
+import ProjectsCard from "@/components/about/grid/grid3/projects-card";
 
 export default function AboutPage() {
 
@@ -39,7 +47,7 @@ export default function AboutPage() {
 
     return <div
         style={{
-            height: "100vh",
+            height: "fit-content",
         }}
         className={styles.aboutPage}>
         <AboutHeading />
@@ -60,6 +68,34 @@ export default function AboutPage() {
                     </div>
                     <div>
                         <SocialsCard />
+                    </div>
+                </div>
+                <div className={styles.flex1}>
+                    <div className={gridDsp ? `${styles.grid2} ${styles.display}` : styles.grid2}>
+                        <div>
+                            <Lang3dCard/>
+                        </div>
+                        <div>
+                            <Next3dCard/>
+                        </div>
+                        <div>
+                            <Cc3dCard/>
+                        </div>
+                        <div>
+                            <IdeCard/>
+                        </div>
+                        <div>
+                            <LanguageCard />
+                        </div>
+                    </div>
+                    <div className={gridDsp ? `${styles.grid3} ${styles.display}` : styles.grid3}>
+                        <div className={styles.topSec}>
+                            <ProjectCard />
+                        </div>
+                        <div className={styles.bottomSec}>
+                            <MailCard />
+                            <ProjectsCard />
+                        </div>
                     </div>
                 </div>
             </div>
