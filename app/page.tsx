@@ -6,19 +6,23 @@ import ProjectsPage from "@/components/projects/projects-page";
 export default function Home() {
 
     return (
-      <main>
-        <div data-scroll-id="home" id="home">
-            <HomePage />
-        </div>
-        <div style={{
-            paddingTop: "10vh",
-            height: "fit-content",
-        }} data-scroll-id="about" id="about">
-            <AboutPage />
-        </div>
-        <div data-scroll-id="projects" id="projects">
-            <ProjectsPage />
-        </div>
-      </main>
-  );
+        <main>
+            <div style={{
+                padding: "0",
+                height: "100vh",
+            }} data-scroll-id="home" id="home">
+                <HomePage/>
+            </div>
+            <div style={{
+                paddingTop: "calc(10vh + 150px)"
+            }} data-scroll-id="about" id="about">
+                <AboutPage/>
+            </div>
+            <div id="divider"></div>
+            <div style={{
+            }} data-scroll-id="projects" id="projects">
+                <ProjectsPage/>
+            </div>
+        </main>
+    );
 }

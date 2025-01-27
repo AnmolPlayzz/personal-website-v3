@@ -4,36 +4,31 @@ export function useVisibleSection(sectionIds: string[]): string | null {
     const [visibleSectionId, setVisibleSectionId] = useState<string | null>(null);
 
     useEffect(() => {
-        // Configure the observer with a 50% threshold
-        const observerOptions = {
-            threshold: 0.5, // Trigger when 50% of the element is visible
-            rootMargin: '0px' // No margin around the viewport
+        const checkVisibility = () => {
+            sectionIds.forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+                    if (isVisible) {
+                        setVisibleSectionId(id);
+                    }
+                }
+            });
         };
 
-        const observerCallback: IntersectionObserverCallback = (entries) => {
-            // Filter for elements that are more than 50% visible
-            const visibleEntries = entries.filter(entry => entry.isIntersecting);
+        // Check initial visibility
+        checkVisibility();
 
-            if (visibleEntries.length > 0) {
-                // If multiple elements are visible, take the one with the highest intersection ratio
-                const mostVisible = visibleEntries.reduce((prev, current) =>
-                    current.intersectionRatio > prev.intersectionRatio ? current : prev
-                );
+        // Add scroll listener
+        window.addEventListener('scroll', checkVisibility);
+        // Also listen for resize in case viewport dimensions change
+        window.addEventListener('resize', checkVisibility);
 
-                setVisibleSectionId(mostVisible.target.id);
-            }
+        return () => {
+            window.removeEventListener('scroll', checkVisibility);
+            window.removeEventListener('resize', checkVisibility);
         };
-
-        const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-        sectionIds.forEach(id => {
-            const element = document.getElementById(id);
-            if (element) {
-                observer.observe(element);
-            }
-        });
-
-        return () => observer.disconnect();
     }, [sectionIds]);
 
     return visibleSectionId;

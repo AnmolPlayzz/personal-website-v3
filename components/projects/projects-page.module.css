@@ -1,5 +1,4 @@
 .projectsPage {
-    position: absolute;
     height: fit-content;
     width: 100%;
     display: flex;
@@ -8,6 +7,10 @@
     .head {
         position: relative;
         width: fit-content;
+        scale: 1.1;
+        filter: blur(10px);
+        opacity: 0;
+        transition: all .5s ease;
         .blur {
             scale: 1.05;
             position: absolute;
@@ -17,6 +20,13 @@
             filter: blur(50px);
         }
     }
+
+    .head.display {
+        scale: 1;
+        opacity: 1;
+        filter: blur(0px);
+    }
+
     .featured {
         margin: 25px 0;
         width: calc(100% - 40px);
@@ -24,6 +34,9 @@
         display: flex;
         gap: 25px;
         height: 700px;
+        opacity: 0;
+        transform: scale(.9) translateY(200px);
+        transition: all 0.6s cubic-bezier(0.87, 0, 0.13, 1);
         .info {
             .h1 {
                 color: white;
@@ -92,7 +105,8 @@
         gap: 25px;
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
         grid-auto-rows: 400px;
-        margin-bottom: 80px;
+        opacity: 0;
+        transition: all 0.3s ease-in;
         .githubCta {
             overflow: hidden;
             display: flex;
@@ -104,6 +118,7 @@
             text-decoration: none;
             color: rgb(255, 255, 255);
             border: 1px solid rgba(255, 255, 255, 0.21);
+            transition: all 0.2s ease;
             .gitIcon {
                 position: absolute;
                 top: 50%;
@@ -112,7 +127,7 @@
                 width: 80%;
                 height: 80%;
                 mix-blend-mode: soft-light;
-                transition: all 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+                transition: all 0.5s cubic-bezier(0.87, 0, 0.13, 1);
             }
             .text {
                 padding: 40px;
@@ -120,8 +135,18 @@
                 font-size: 32px;
                 z-index: 10;
                 display: inline-block;
-                transition: all 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+                transition: all 0.5s cubic-bezier(0.87, 0, 0.13, 1);
             }
+        }
+        .githubCta::after {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: '';
+            background: white;
+            transition: all 0.4s cubic-bezier(0.87, 0, 0.13, 1);
         }
         .githubCta:hover {
             .gitIcon {
@@ -129,8 +154,19 @@
                 height: 90%;
             }
             .text {
-                margin-bottom: 20px;
+                margin-bottom: 100px;
+                filter: invert(1);
             }
+        }
+        .githubCta:hover::after {
+            bottom: 0;
+        }
+        .githubCta:active {
+            scale: .9;
+        }
+        .githubCta:active::after {
+            bottom: 0;
+            background: rgb(225, 225, 225);
         }
     }
 }
@@ -185,6 +221,41 @@
         }
         .projectList {
             grid-template-columns: 1fr;
+            .githubCta {
+                .text {
+                    padding: 20px;
+                }
+            }
+
+            .githubCta:hover {
+                .gitIcon {
+                    width: 80%;
+                    height: 80%;
+                }
+                .text {
+                    margin-bottom: 0;
+                    filter: none;
+                }
+            }
+            .githubCta:hover::after {
+                bottom: -100%;
+            }
+
+            .githubCta:active {
+                scale: .9;
+                .gitIcon {
+                    width: 90%;
+                    height: 90%;
+                }
+                .text {
+                    margin-bottom: 100px;
+                    filter: invert(1);
+                }
+            }
+            .githubCta:active::after {
+                bottom: 0;
+                background: rgb(225, 225, 225);
+            }
         }
     }
 }

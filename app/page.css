@@ -1,8 +1,12 @@
 main {
-    display: grid;
-    gap: 200px;
     color: white;
 }
+#divider {
+    padding: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(68,68,68,1) 24%, rgba(117,117,117,1) 46%, rgba(42,42,42,1) 66%, rgba(0,0,0,1) 100%); }
 main > div {
-    height: 100vh;
+    padding: 100px 0;
 }
+

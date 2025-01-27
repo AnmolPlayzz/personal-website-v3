@@ -4,23 +4,20 @@ import Image from "next/image";
 import Link from "next/link";
 import React, {useEffect, useState} from "react";
 import {useVisibleSection} from "@/hooks/useVisibleSection";
-import {useParams, usePathname} from 'next/navigation'
 import useHash from "@/hooks/useHash";
 export default function Navbar() {
-    //Tracking the current content on the screen
     const sections : string[] = ['home', 'about', 'projects'];
     const currentUrl : string | null = useVisibleSection(sections);
+    console.log(currentUrl);
 
     const hash = useHash()
     const [current, setCurrent] = useState<null | string>("")
 
-    //For the desktop nav
     const [x, setX] = useState<number | null>(null);
     const [y, setY] = useState<number | null>(null);
     const [width, setWidth] = useState<number | null>(null);
     const [height, setHeight] = useState<number | null>(null);
 
-    //For the mobile nav
     const [open, setOpen] = useState<boolean>(false);
 
     function handleMouseOver(e: any) {
@@ -48,7 +45,6 @@ export default function Navbar() {
         setY(data.top - dataNavBar.top - 1)
         setHeight(data.height)
         setWidth(data.width)
-        console.log(data)
     }
 
     function handleItemClick(e?: any) {

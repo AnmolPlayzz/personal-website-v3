@@ -18,7 +18,6 @@ import MailCard from "@/components/about/grid/grid3/mail-card";
 import ProjectsCard from "@/components/about/grid/grid3/projects-card";
 
 export default function AboutPage() {
-
     const glowRef = useRef<HTMLDivElement>(null);
     const [gridDsp, setGridDsp] = useState<boolean>(false);
 
@@ -45,8 +44,7 @@ export default function AboutPage() {
         return () => observer.disconnect();
     }, []);
 
-    return <div
-        className={styles.aboutPage}>
+    return <div className={styles.aboutPage}>
         <AboutHeading />
         <div className={styles.glow} ref={glowRef}>
             <Image className={styles.glowImage} src={glow} alt={"Glow"} width={900}/>

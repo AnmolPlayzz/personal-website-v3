@@ -11,8 +11,9 @@
     display: none;
 }
 
-html.has-scroll-smooth {
-    overflow: hidden;
+html {
+    scroll-behavior: smooth;
+
 }
 
 :root {
