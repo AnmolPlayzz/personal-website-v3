@@ -173,6 +173,7 @@
 
 @media screen and (max-width: 1120px) {
     .projectsPage {
+
         .featured {
             flex-direction: column;
             .left {
@@ -198,6 +199,12 @@
 
 @media screen and (max-width: 800px) {
     .projectsPage {
+        .head {
+            scale: 0.9 !important;
+        }
+        .head.display {
+            scale: 1 !important;
+        }
         .featured {
             flex-direction: column;
             height: 1200px;

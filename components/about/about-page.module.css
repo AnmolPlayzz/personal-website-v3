@@ -186,6 +186,7 @@
                         "b b"
                         "b b";
                         width: 100%;
+                        grid-auto-columns: 1fr !important;
                         max-width: calc(179px * 3);
                     }
                     .grid2 > *:nth-child(1) {
