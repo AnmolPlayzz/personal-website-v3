@@ -9,7 +9,7 @@ export default function Home() {
         <main>
             <div style={{
                 padding: "0",
-                height: "100vh",
+                height: "calc(100vh + 200px)",
             }} data-scroll-id="home" id="home">
                 <HomePage/>
             </div>

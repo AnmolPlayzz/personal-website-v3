@@ -1,7 +1,7 @@
 # personal-website-v3
 The v3 of my personal website. 
 
-I plan to build it with some 3d elements. 
+I plan to build it with some 3d elements.
 This is supposed to be my most flagship project.
 
 ## The stack
