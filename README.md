@@ -1,33 +1,68 @@
-# personal-website-v3
-The v3 of my personal website. 
-
-I plan to build it with some 3d elements.
-This is supposed to be my most flagship project.
-
-## The stack
-The stack is pretty much set to be Next.JS. Even though I would like to - I don't have enough time for ThreeJS, so we aren't using that as of now.
-
-## Concepts
-I have come up with the basic concept of how the website is going to look.
-
-### Full Page
-<details>
-  <summary>
-    Click to view
-  </summary>
-  
-  ![v3 5-concept](https://github.com/user-attachments/assets/7bb74de2-8963-4f75-9792-edaeeb861f2a)
-</details>
-
-### Video
-https://github.com/user-attachments/assets/3071cb2a-3e93-453e-82af-433b9c1b2f2d
-
-
-## Current status: Early Deveopment
-I've created the concepts and started work on the basic design of the site. It's a massive project when it comes to assets so an early version will take time.
+<img src="https://github.com/AnmolPlayzz/personal-website-v3/blob/a64e908880836d9e05e315414b62e158159f5551/Extras/Readme/project-card.png?raw=true" align="center"> </img>
+<h1 align="center">
+    Personal Website
+</h1>
 
 ---
 
-Suggestions are always welcome! DM me on Discord if you have any (`@iam.anmol`)
+<p align="center">
+    v3 of my personal website.
+</p>
 
+<p align="center">
+  <img alt="GitHub" src="https://img.shields.io/github/license/anmolplayzz/personal-website-v3" align="center">
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/anmolplayzz/personal-website-v3" align="center">
+  <img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/anmolplayzz/personal-website-v3" align="center">
+  <img alt="GitHub issues" src="https://img.shields.io/badge/Status-stable-green" align="center">
+</p>
 
+<p align="center">
+    <a href="https://anmolcreates.tech/">https://anmolcreates.tech/</a>
+</p>
+
+## 🔥 About
+This is my personal website, built to showcase my work, projects, and ide~ Fuck this LinkedIn shit, I'm a narcissist and I talk about myself in this website, jackass.
+
+## 🛠️ Tech Stack
+![Tools Used](https://skillicons.dev/icons?i=next,ts,css)
+
+- **Framework:** [Next.js](https://nextjs.org)
+- **Languages:** TypeScript & CSS
+- **Supporting libraries:**
+    - GSAP - Used for programmatically animationg elements
+    - Lottie - For playing pre rendered animations
+
+## ⚡ Features
+- **Sleek, minimal UI** – Dark mode by default, because light mode is blinding
+- **Smooth animations** – Powered by GSAP for that polished feel
+- **Projects Showcase** – A section to highlight my best work
+
+## 📸 Screenshots
+![Desktop](https://github.com/AnmolPlayzz/personal-website-v3/blob/main/Extras/Readme/desktop.png?raw=true)
+![Mobile](https://github.com/AnmolPlayzz/personal-website-v3/blob/main/Extras/Readme/mobile.jpeg?raw=true)
+
+## 📌 Setup & Installation
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/anmolplayzz/personal-website-v3.git
+   ```
+2. Install dependencies:
+   ```bash
+   cd personal-website-v3
+   npm install
+   ```
+3. Run the dev server:
+   ```bash
+   npm run dev
+   ```
+4. Open [localhost:3000](http://localhost:3000) and enjoy
+
+## 🌎 Live Demo
+[🔗 anmolcreates.tech](https://anmolcreates.tech)
+
+## 📝 License
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
+ 
+---
+
+Made with NextJS, TypeScript, CSS, GSAP, Lottie, After Effects, Illustrator, Substance Stager and 🥰 + 🎶 by @AnmolPlayzz
