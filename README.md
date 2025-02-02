@@ -2,9 +2,6 @@
 <h1 align="center">
     Personal Website
 </h1>
-
----
-
 <p align="center">
     v3 of my personal website.
 </p>
